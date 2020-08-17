@@ -80,7 +80,7 @@ public class DigitalTwinsAsyncClient {
                 // The PL gives us a Mono<DigitalTwinsAddRelationshipResponse>, so we use Mono.flatMap to transform the items emitted
                 // from Mono<DigitalTwinsAddRelationshipResponse> to Mono<String>, asynchronously.
                 .flatMap(
-                    // Mono.just(item) crates a new Mono that emits the specified item.
+                    // Mono.just(item) creates a new Mono that emits the specified item.
                     // response.getValue gives us the deserialized Http response body (Object).
                     response -> Mono.just(response.getValue().toString()));
         } catch (RuntimeException ex) {
@@ -107,7 +107,7 @@ public class DigitalTwinsAsyncClient {
                 // The PL gives us a Mono<DigitalTwinsAddRelationshipResponse>, so we use Mono.flatMap to transform the items emitted
                 // from Mono<DigitalTwinsAddRelationshipResponse> to Mono<Response<<String>>, asynchronously.
                 .flatMap(
-                    // Mono.just(item) crates a new Mono that emits the specified item.
+                    // Mono.just(item) creates a new Mono that emits the specified item.
                     // SimpleResponse is an implementation of the interface Response<T>.
                     // response.getValue gives us the deserialized Http response body (Object).
                     response -> Mono.just(new SimpleResponse<>(response, response.getValue().toString())));
