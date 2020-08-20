@@ -140,6 +140,11 @@
       <version>2.5</version> <!-- {x-version-update;commons-io:commons-io;external_dependency} -->
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>net.sourceforge.tcljava</groupId>
+      <artifactId>com.springsource.tcl.lang</artifactId>
+      <version>1.4.1</version>
+    </dependency>
   </dependencies>
   <profiles>
     <profile>
